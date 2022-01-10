@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Flipper || Simple</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+    <main>
+      <div class="container">
+
+        <h2>background color : <span class="color"> </span> </h2>
+
+        <button class="btn btn-hero" id="btn">click me</button>
+      </div>
+    </main>
+    <!-- javascript -->
+    <script>
+      const colors =["#e1864a", "#cfa387", "#abcf87","#87cfb1", "#2257c3", "#7022c3","#c32279"];
+
+const btn = document.getElementById("btn");
+const color = document.getElementById(".color");
+
+
+btn.addEventListener("click",function(){
+  const randomNumber = getrandomNumber();
+
+  document.body.style.background = colors[randomNumber];
+  // color.textContent = colors[randomNumber];
+})
+
+function getrandomNumber() {
+  return Math.floor(Math.random()*colors.length);
+}
+
+
+
+    </script>
+  </body>
+</html>
