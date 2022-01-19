@@ -5,7 +5,9 @@ const btns = document.querySelectorAll(".btn");
 
 btns.forEach(function(btn){
     btn.addEventListener("click",function(c){
+        
         const style = c.currentTarget.classList;
+        // console.log(style);
     
         if(style.contains("decrease")){
             count--;
